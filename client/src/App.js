@@ -88,12 +88,14 @@ class App extends Component {
            </nav>
 
 
+           <Button bsStyle="primary">Primary</Button>
+
            <Route path="/" exact component={Index} />
            <Route path="/donation/" component={Donation} />
            <Route path="/store/" component={Store} />
            <Route path="/profile/" component={Profile} />
 
-            <h1>Good to Go!</h1>
+            {/*<h1>Good to Go!</h1>
             <p>Your Truffle Box is installed and ready.</p>
             <h2>Smart Contract Example</h2>
             <p>
@@ -103,7 +105,7 @@ class App extends Component {
             <p>
             Try changing the value stored on <strong>line 40</strong> of App.js.
             </p>
-            <div>Your balance is: {this.state.balance}</div>
+            <div>Your balance is: {this.state.balance}</div>*/}
          </div>
         </div>
       </Router>
