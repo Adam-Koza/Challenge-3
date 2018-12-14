@@ -63,24 +63,6 @@ class App extends Component {
     return (
       <Router>
    <div>
-     <nav>
-       <ul>
-         <li>
-           <Link to="/">Home</Link>
-         </li>
-         <li>
-           <Link to="/about/">About</Link>
-         </li>
-         <li>
-           <Link to="/users/">Users</Link>
-         </li>
-       </ul>
-     </nav>
-
-     <Route path="/" exact component={Index} />
-     <Route path="/about/" component={About} />
-     <Route path="/users/" component={Users} />
-
        <h1>Good to Go!</h1>
        <p>Your Truffle Box is installed and ready.</p>
        <h2>Smart Contract Example</h2>
@@ -96,7 +78,25 @@ class App extends Component {
        {/* Actual App start */}
        <Header title="CareCoin" />
        <div className="main-container">
-         main container
+         <br />
+         router stuff:
+         <nav>
+           <ul>
+             <li>
+               <Link to="/">Home</Link>
+             </li>
+             <li>
+               <Link to="/about/">About</Link>
+             </li>
+             <li>
+               <Link to="/users/">Users</Link>
+             </li>
+           </ul>
+         </nav>
+
+         <Route path="/" exact component={Index} />
+         <Route path="/about/" component={About} />
+         <Route path="/users/" component={Users} />
        </div>
      </div>
  </Router>
