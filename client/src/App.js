@@ -3,6 +3,9 @@ import SimpleStorageContract from "./contracts/SimpleStorage.json";
 import getWeb3 from "./utils/getWeb3";
 import truffleContract from "truffle-contract";
 
+// components
+import Header from './components/header';
+
 import "./App.css";
 
 class App extends Component {
@@ -63,6 +66,12 @@ class App extends Component {
           Try changing the value stored on <strong>line 40</strong> of App.js.
         </p>
         <div>The stored value is: {this.state.storageValue}</div>
+
+        {/* Actual App start */}
+        <Header title="CareCoin" />
+        <div className="main-container">
+
+        </div>
       </div>
     );
   }
