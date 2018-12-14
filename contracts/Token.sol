@@ -2,8 +2,8 @@ pragma solidity ^0.4.24;
 
 contract Token {
 
-  address owner;
-  uint public totalSupply;
+    address owner;
+    uint public totalSupply;
   
   mapping (address => uint) public balances;
   mapping (address => uint) public expiration;
@@ -49,6 +49,7 @@ contract Token {
   function addMinter(address _minter) public returns (bool) {
       require(minters[msg.sender] == true);
       minters[_minter] = true;
+      expiration[_minter] = 0;
       return true;
   }
 
