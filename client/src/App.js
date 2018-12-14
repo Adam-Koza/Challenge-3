@@ -3,11 +3,19 @@ import TokenContract from "./contracts/Token.json";
 //import SimpleStorageContract from "./contracts/SimpleStorage.json";
 import getWeb3 from "./utils/getWeb3";
 import truffleContract from "truffle-contract";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 // components
 import Header from './components/header';
+import TitleTile from './components/titleTile';
 
 import "./App.css";
+
+// temp router stuf
+const Index = () => <h2>Home</h2>;
+const Donation = () => <h2>Donate and receive CareCoins!</h2>;
+const Store = () => <h2>Redeem CareCoins in our Store!</h2>;
+const Profile = () => <h2>View your awesome profile!</h2>;
 
 class App extends Component {
   state = { balance: 0, web3: null, accounts: null, contract: null };
@@ -55,8 +63,9 @@ class App extends Component {
       return <div>Loading Web3, accounts, and contract...</div>;
     }
     return (
-      <div className="App">
-        <h1>Good to Go!</h1>
+      <Router>
+   <div>
+         <h1>Good to Go!</h1>
         <p>Your Truffle Box is installed and ready.</p>
         <h2>Smart Contract Example</h2>
         <p>
@@ -68,12 +77,35 @@ class App extends Component {
         </p>
         <div>Your balance is: {this.state.balance}</div>
 
-        {/* Actual App start */}
-        <Header title="CareCoin" />
-        <div className="main-container">
-        main container
-        </div>
-      </div>
+       {/* Actual App start */}
+       <Header title="CareCoin" />
+       <div className="main-container">
+         <br />
+         router stuff:
+         <nav>
+           <ul>
+             <li>
+               <Link to="/">Home</Link>
+             </li>
+             <li>
+               <Link to="/donation/">Donation</Link>
+             </li>
+             <li>
+               <Link to="/store/">Store</Link>
+             </li>
+             <li>
+               <Link to="/profile/">Profile</Link>
+             </li>
+           </ul>
+         </nav>
+
+         <Route path="/" exact component={Index} />
+         <Route path="/donation/" component={Donation} />
+         <Route path="/store/" component={Store} />
+         <Route path="/profile/" component={Profile} />
+       </div>
+     </div>
+ </Router>
     );
   }
 }
