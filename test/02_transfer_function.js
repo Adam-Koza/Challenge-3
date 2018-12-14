@@ -49,7 +49,7 @@ contract("Token = transfer function", (accounts) => {
         assert.equal(oldExpiration < newExpiration, false, "expiration date of non-minter tokens is incorrect.");
     })
 
-    it('transfer from account with insufficient balance should revert.', async () => {
+    it('should revert transfer from account with insufficient balance.', async () => {
 
         try {
             await tokenContract.transfer(account2, 500, { from: account4 });
