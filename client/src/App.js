@@ -12,8 +12,9 @@ import "./App.css";
 
 // temp router stuf
 const Index = () => <h2>Home</h2>;
-const About = () => <h2>About</h2>;
-const Users = () => <h2>Users</h2>;
+const Donation = () => <h2>Donate and receive CareCoins!</h2>;
+const Store = () => <h2>Redeem CareCoins in our Store!</h2>;
+const Profile = () => <h2>View your awesome profile!</h2>;
 
 class App extends Component {
   state = { storageValue: 0, web3: null, accounts: null, contract: null };
@@ -86,17 +87,21 @@ class App extends Component {
                <Link to="/">Home</Link>
              </li>
              <li>
-               <Link to="/about/">About</Link>
+               <Link to="/donation/">Donation</Link>
              </li>
              <li>
-               <Link to="/users/">Users</Link>
+               <Link to="/store/">Store</Link>
+             </li>
+             <li>
+               <Link to="/profile/">Profile</Link>
              </li>
            </ul>
          </nav>
 
          <Route path="/" exact component={Index} />
-         <Route path="/about/" component={About} />
-         <Route path="/users/" component={Users} />
+         <Route path="/donation/" component={Donation} />
+         <Route path="/store/" component={Store} />
+         <Route path="/profile/" component={Profile} />
        </div>
      </div>
  </Router>
