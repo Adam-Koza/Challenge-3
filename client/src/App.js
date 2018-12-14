@@ -4,6 +4,9 @@ import TokenContract from "./contracts/Token.json";
 import getWeb3 from "./utils/getWeb3";
 import truffleContract from "truffle-contract";
 
+// components
+import Header from './components/header';
+
 import "./App.css";
 
 class App extends Component {
@@ -64,6 +67,12 @@ class App extends Component {
           Try changing the value stored on <strong>line 40</strong> of App.js.
         </p>
         <div>Your balance is: {this.state.balance}</div>
+
+        {/* Actual App start */}
+        <Header title="CareCoin" />
+        <div className="main-container">
+        main container
+        </div>
       </div>
     );
   }
