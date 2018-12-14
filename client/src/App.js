@@ -4,6 +4,7 @@ import TokenContract from "./contracts/Token.json";
 import getWeb3 from "./utils/getWeb3";
 import truffleContract from "truffle-contract";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Button } from 'react-bootstrap';
 
 // components
 import Header from './components/header';
@@ -64,48 +65,48 @@ class App extends Component {
     }
     return (
       <Router>
-   <div>
-         <h1>Good to Go!</h1>
-        <p>Your Truffle Box is installed and ready.</p>
-        <h2>Smart Contract Example</h2>
-        <p>
-          If your contracts compiled and migrated successfully, below will show
-          a Balance of 10000 (by default).
-        </p>
-        <p>
-          Try changing the value stored on <strong>line 40</strong> of App.js.
-        </p>
-        <div>Your balance is: {this.state.balance}</div>
+        <div>
+         <Header title="CareCoin" />
+         <div className="main-container">
+           <br />
+           router stuff:
+           <nav>
+             <ul>
+               <li>
+                 <Link to="/">Home</Link>
+               </li>
+               <li>
+                 <Link to="/donation/">Donation</Link>
+               </li>
+               <li>
+                 <Link to="/store/">Store</Link>
+               </li>
+               <li>
+                 <Link to="/profile/">Profile</Link>
+               </li>
+             </ul>
+           </nav>
 
-       {/* Actual App start */}
-       <Header title="CareCoin" />
-       <div className="main-container">
-         <br />
-         router stuff:
-         <nav>
-           <ul>
-             <li>
-               <Link to="/">Home</Link>
-             </li>
-             <li>
-               <Link to="/donation/">Donation</Link>
-             </li>
-             <li>
-               <Link to="/store/">Store</Link>
-             </li>
-             <li>
-               <Link to="/profile/">Profile</Link>
-             </li>
-           </ul>
-         </nav>
 
-         <Route path="/" exact component={Index} />
-         <Route path="/donation/" component={Donation} />
-         <Route path="/store/" component={Store} />
-         <Route path="/profile/" component={Profile} />
-       </div>
-     </div>
- </Router>
+           <Route path="/" exact component={Index} />
+           <Route path="/donation/" component={Donation} />
+           <Route path="/store/" component={Store} />
+           <Route path="/profile/" component={Profile} />
+
+            <h1>Good to Go!</h1>
+            <p>Your Truffle Box is installed and ready.</p>
+            <h2>Smart Contract Example</h2>
+            <p>
+            If your contracts compiled and migrated successfully, below will show
+            a Balance of 10000 (by default).
+            </p>
+            <p>
+            Try changing the value stored on <strong>line 40</strong> of App.js.
+            </p>
+            <div>Your balance is: {this.state.balance}</div>
+         </div>
+        </div>
+      </Router>
     );
   }
 }
