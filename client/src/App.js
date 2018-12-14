@@ -5,6 +5,7 @@ import truffleContract from "truffle-contract";
 
 // components
 import Header from './components/header';
+import TitleTile from './components/titleTile';
 
 import "./App.css";
 
@@ -70,7 +71,7 @@ class App extends Component {
         {/* Actual App start */}
         <Header title="CareCoin" />
         <div className="main-container">
-        main container
+          main container
         </div>
       </div>
     );
