@@ -9,4 +9,14 @@ npm install
 
 cd client
 
-npm run start
+npm install
+
+npm start
+
+new terminal: 
+ganache-cli --mnemonic "birth..."
+
+metamask: 
+select network - localhost 8545
+
+
