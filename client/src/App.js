@@ -70,7 +70,7 @@ class App extends Component {
         {/* Actual App start */}
         <Header title="CareCoin" />
         <div className="main-container">
-
+        main container
         </div>
       </div>
     );
