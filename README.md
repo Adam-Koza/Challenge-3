@@ -11,12 +11,20 @@ cd client
 
 npm install
 
-npm start
-
 new terminal: 
 ganache-cli --mnemonic "birth..."
 
 metamask: 
 select network - localhost 8545
+
+new terminal: 
+cd coin-care
+
+truffle migrate
+
+cd client
+
+npm start
+
 
 
