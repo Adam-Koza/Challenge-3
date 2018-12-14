@@ -53,6 +53,14 @@ contract Token {
         return true;
     }
 
+    function removeMinter(address _minter) public returns(bool) {
+        require(minters[msg.sender] == true);
+        minters[_minter] = false;
+        totalSupply -= balances[_minter];
+        balances[_minter] = 0;
+        return true;
+    }
+
     function mint(uint _amount) public returns(bool) {
         require(minters[msg.sender] == true);
         totalSupply += _amount;
