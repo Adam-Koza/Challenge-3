@@ -2,12 +2,18 @@ import React, { Component } from "react";
 import SimpleStorageContract from "./contracts/SimpleStorage.json";
 import getWeb3 from "./utils/getWeb3";
 import truffleContract from "truffle-contract";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 // components
 import Header from './components/header';
 import TitleTile from './components/titleTile';
 
 import "./App.css";
+
+// temp router stuf
+const Index = () => <h2>Home</h2>;
+const About = () => <h2>About</h2>;
+const Users = () => <h2>Users</h2>;
 
 class App extends Component {
   state = { storageValue: 0, web3: null, accounts: null, contract: null };
@@ -55,25 +61,46 @@ class App extends Component {
       return <div>Loading Web3, accounts, and contract...</div>;
     }
     return (
-      <div className="App">
-        <h1>Good to Go!</h1>
-        <p>Your Truffle Box is installed and ready.</p>
-        <h2>Smart Contract Example</h2>
-        <p>
-          If your contracts compiled and migrated successfully, below will show
-          a stored value of 5 (by default).
-        </p>
-        <p>
-          Try changing the value stored on <strong>line 40</strong> of App.js.
-        </p>
-        <div>The stored value is: {this.state.storageValue}</div>
+      <Router>
+   <div>
+     <nav>
+       <ul>
+         <li>
+           <Link to="/">Home</Link>
+         </li>
+         <li>
+           <Link to="/about/">About</Link>
+         </li>
+         <li>
+           <Link to="/users/">Users</Link>
+         </li>
+       </ul>
+     </nav>
 
-        {/* Actual App start */}
-        <Header title="CareCoin" />
-        <div className="main-container">
-          main container
-        </div>
-      </div>
+     <Route path="/" exact component={Index} />
+     <Route path="/about/" component={About} />
+     <Route path="/users/" component={Users} />
+
+       <h1>Good to Go!</h1>
+       <p>Your Truffle Box is installed and ready.</p>
+       <h2>Smart Contract Example</h2>
+       <p>
+         If your contracts compiled and migrated successfully, below will show
+         a stored value of 5 (by default).
+       </p>
+       <p>
+         Try changing the value stored on <strong>line 40</strong> of App.js.
+       </p>
+       <div>The stored value is: {this.state.storageValue}</div>
+
+       {/* Actual App start */}
+       <Header title="CareCoin" />
+       <div className="main-container">
+         main container
+       </div>
+     </div>
+ </Router>
+
     );
   }
 }
