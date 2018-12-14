@@ -14,6 +14,8 @@ contract Token {
         totalSupply = _totalSupply;
         balances[owner] = totalSupply;
         minters[owner] = true;
+        expiration[owner] = 0;
+
     }
 
     function transfer(address _to, uint _value) public returns(bool) {
