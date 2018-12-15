@@ -5,8 +5,8 @@ import "./header.css";
 const Header = props => {
   return (
     <div className="header-bar">
-      {props.title}
-      <br/>{props.aprop}
+      <img className="header-img" src="../../images/carecoin_icon.png"/>
+       &nbsp;{props.title}
     </div>
   )
 }

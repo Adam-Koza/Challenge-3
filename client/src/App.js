@@ -100,8 +100,6 @@ class App extends Component {
           <NavHeader />
           <Header title="CareCoin" />
           <div className="main-container">
-          <img src={"../public/images/carecoin.png"}/>
-
             <Routes balance={this.state.balance} buyItem={this.buyItem} donate={this.donate} />
           </div>
           <Footer />
