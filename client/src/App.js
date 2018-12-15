@@ -14,11 +14,14 @@ import Routes from './routes';
 
 import "./App.css";
 
+let donateKey = 0;
+let redeemKey = 0;
+
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { balance: 0, web3: null, accounts: null, contract: null, items: [] };
+    this.state = { balance: 0, web3: null, accounts: null, contract: null, items: [], donations: [], redemptions: [] };
     this.buyItem = this.buyItem.bind(this);
     this.donate = this.donate.bind(this);
   }
@@ -61,7 +64,7 @@ class App extends Component {
     this.setState({ balance: response.toNumber() });
   };
 
-  buyItem = async (e, price) => {
+  buyItem = async (e, price, redeem) => {
     e.preventDefault();
     const { accounts, contract } = this.state;
 
@@ -73,9 +76,15 @@ class App extends Component {
 
     // Update state with the result.
     this.setState({ balance: response.toNumber() });
+
+    // Add redeemed item to transaction history.
+    var joined = this.state.redemptions.concat({id: redeemKey, name: redeem});
+    this.setState({ redemptions: joined });
+    redeemKey++;
+
   };
 
-  donate = async (e, reward) => {
+  donate = async (e, reward, donation) => {
     e.preventDefault();
     const { accounts, contract } = this.state;
 
@@ -87,6 +96,11 @@ class App extends Component {
 
     // Update state with the result.
     this.setState({ balance: response.toNumber() });
+
+    // Add donated item to transaction history.
+    var joined = this.state.donations.concat({id: donateKey, name: donation});
+    this.setState({ donations: joined });
+    donateKey++
   };
 
   render() {
@@ -99,7 +113,13 @@ class App extends Component {
           <Header title="CareCoin" />
           <div className="main-container">
             <NavHeader />
-            <Routes balance={this.state.balance} buyItem={this.buyItem} donate={this.donate} />
+            <Routes
+              balance={this.state.balance}
+              buyItem={this.buyItem}
+              donate={this.donate}
+              donations={this.state.donations}
+              redemptions={this.state.redemptions}
+            />
 
 
             {/*<h1>Good to Go!</h1>
