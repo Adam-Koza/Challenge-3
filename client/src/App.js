@@ -9,14 +9,12 @@ import { Button } from 'react-bootstrap';
 // components
 import Header from './components/header';
 import TitleTile from './components/titleTile';
+import HomePage from './components/homePage';
+import Donation from './components/donation/donation';
+import Profile from './components/profile/profile';
+import Store from './components/store/store';
 
 import "./App.css";
-
-// temp router stuf
-const Index = () => <h2>Home</h2>;
-const Donation = () => <h2>Donate and receive CareCoins!</h2>;
-const Store = () => <h2>Redeem CareCoins in our Store!</h2>;
-const Profile = () => <h2>View your awesome profile!</h2>;
 
 class App extends Component {
   state = { balance: 0, web3: null, accounts: null, contract: null };
@@ -90,7 +88,7 @@ class App extends Component {
 
            <Button bsStyle="primary">Primary</Button>
 
-           <Route path="/" exact component={Index} />
+           <Route path="/" exact component={HomePage} />
            <Route path="/donation/" component={Donation} />
            <Route path="/store/" component={Store} />
            <Route path="/profile/" component={Profile} />
