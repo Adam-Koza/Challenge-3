@@ -6,11 +6,9 @@ import "./donation.css";
 
 const Donation = props => {
   return (
-    <div className="donation-container">
+    <div class="donation-container">
       <h2>Donate and receive CareCoins!</h2>
-      <div className="donation-item-container">
-        <DonationItemContainer />
-      </div>
+      <DonationItemContainer />
     </div>
   )
 }
