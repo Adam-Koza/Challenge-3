@@ -9,11 +9,8 @@ import { Button } from 'react-bootstrap';
 // components
 import Header from './components/header';
 import TitleTile from './components/titleTile';
-import HomePage from './components/homePage';
-import Donation from './components/donation/donation';
-import Profile from './components/profile/profile';
-import Store from './components/store/store';
 import NavHeader from './components/navHeader';
+import Routes from './routes';
 
 import "./App.css";
 
@@ -68,11 +65,8 @@ class App extends Component {
          <Header title="CareCoin" />
          <div className="main-container">
            <NavHeader />
+           <Routes />
 
-           <Route path="/" exact component={HomePage} />
-           <Route path="/donation/" component={Donation} />
-           <Route path="/store/" component={Store} />
-           <Route path="/profile/" component={Profile} />
 
             {/*<h1>Good to Go!</h1>
             <p>Your Truffle Box is installed and ready.</p>
