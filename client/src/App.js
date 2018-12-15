@@ -99,7 +99,7 @@ class App extends Component {
           <Header title="CareCoin" />
           <div className="main-container">
             <NavHeader />
-            <Routes balance={this.state.balance} buyItem={this.buyItem} />
+            <Routes balance={this.state.balance} buyItem={this.buyItem} donate={this.donate} />
 
 
             {/*<h1>Good to Go!</h1>

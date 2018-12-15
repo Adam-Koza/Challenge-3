@@ -17,7 +17,9 @@ export default class Routes extends Component {
     return (
       <Switch>
         <Route path="/" exact component={HomePage} />
-        <Route path="/donation/" component={Donation} />
+        <Route path="/donation/"
+          render={(props) => <Donation {...props} donate={this.props.donate} />}
+        />
         <Route path="/store/"
           render={(props) => <Store {...props} balance={this.props.balance} buyItem={this.props.buyItem} />}
         />
