@@ -13,11 +13,11 @@ const Item = props => {
 					<h4 className="handle">{props.handle} - {props.date}</h4>
 				</div>
 				<div className="item-body">
-					<img src={props.body}/>
+					<img src={props.body} />
 				</div>
 				<div className="item-bottom">
-				<b>CareCoins: {props.price}</b>
-				<button type="button" className="btn btn-success" onClick={(e) => props.buyItem(e, props.price, props.name)}>Redeem</button>
+					<div><b>CareCoins: {props.price}</b></div>
+					<div><button type="button" className="btn btn-success" onClick={(e) => props.buyItem(e, props.price, props.name)}>Redeem</button></div>
 				</div>
 
 			</div>
