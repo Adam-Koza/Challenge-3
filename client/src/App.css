@@ -33,8 +33,24 @@
 
 .main-container{
   width: 100%;
-  height: 20vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+
   /* background-color: cyan; */
   /* padding-top: 5em; */
   /* display:flex; */
+}
+
+.footer {
+  position:fixed;
+  bottom:0;
+  width:100%;
+}
+
+.header {
+  position:fixed;
+  top:0;
+  width:100%;
 }

@@ -96,12 +96,13 @@ class App extends Component {
     return (
       <Router>
         <div>
+          <NavHeader />
           <Header title="CareCoin" />
           <div className="main-container">
-            <NavHeader />
             <Routes balance={this.state.balance} buyItem={this.buyItem} donate={this.donate} />
-
-            <NavHeader />
+            <div className="footer">
+            some footer here
+            </div>
           </div>
         </div>
       </Router>

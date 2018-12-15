@@ -6,6 +6,7 @@ import "./navHeader.css";
 
 const NavHeader = props => {
   return (
+    <div className="fixed-header">
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <a className="navbar-brand" href="/">CareCoin</a>
 
@@ -30,6 +31,7 @@ const NavHeader = props => {
         </form>
       </div>
     </nav>
+    </div>
   )
 }
 
