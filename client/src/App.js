@@ -20,6 +20,7 @@ class App extends Component {
     super(props);
     this.state = { balance: 0, web3: null, accounts: null, contract: null, items: [] };
     this.buyItem = this.buyItem.bind(this);
+    this.donate = this.donate.bind(this);
   }
 
   componentDidMount = async () => {
@@ -74,6 +75,20 @@ class App extends Component {
     this.setState({ balance: response.toNumber() });
   };
 
+  donate = async (e, reward) => {
+    e.preventDefault();
+    const { accounts, contract } = this.state;
+
+    // Spend tokens.
+    await contract.mint(reward, { from: accounts[0] });
+
+    // Get the balance from the contract to prove it worked.
+    const response = await contract.balanceOf(accounts[0]);
+
+    // Update state with the result.
+    this.setState({ balance: response.toNumber() });
+  };
+
   render() {
     if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
@@ -84,7 +99,7 @@ class App extends Component {
           <Header title="CareCoin" />
           <div className="main-container">
             <NavHeader />
-            <Routes balance={this.state.balance} buyItem={this.buyItem} />
+            <Routes balance={this.state.balance} buyItem={this.buyItem} donate={this.donate} />
 
 
             {/*<h1>Good to Go!</h1>
