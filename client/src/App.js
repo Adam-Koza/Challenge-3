@@ -10,6 +10,7 @@ import { Button } from 'react-bootstrap';
 import Header from './components/header';
 import TitleTile from './components/titleTile';
 import NavHeader from './components/navHeader';
+import Footer from './components/footer';
 import Routes from './routes';
 
 import "./App.css";
@@ -110,6 +111,7 @@ class App extends Component {
     return (
       <Router>
         <div>
+          <NavHeader />
           <Header title="CareCoin" />
           <div className="main-container">
             <NavHeader />
@@ -134,6 +136,7 @@ class App extends Component {
             </p>
             <div>Your balance is: {this.state.balance}</div>*/}
           </div>
+          <Footer />
         </div>
       </Router>
     );

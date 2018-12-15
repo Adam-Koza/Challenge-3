@@ -5,33 +5,35 @@ import { Button } from 'react-bootstrap';
 // CSS
 import "./homePage.css";
 
+// url strings
+const IMAGE_URL = "../../images/carecoin_dark.png";
+
 const HomePage = props => {
   return (
     <div class="home-container">
       <div class="home-title">
-        <h1>Welcome to CareCoin - decentralized donation app!</h1>
+        <h1>Welcome To</h1>
+        <img src={IMAGE_URL} className="banner-image"/>
+        <h2>A Decentralized Donation App!</h2>
       </div>
       <br />
-      <div class="home-items">
+      <div class="home-items col-5">
           <br />
           <p>
-            <h3>Donate and receive CareCoin tokens:</h3>
             <LinkContainer to="/donation/">
-              <Button bsStyle="success" bsSize="large">Donation</Button>
+              <Button bsStyle="success" bsSize="large" block><h3>Donate and receive CareCoin tokens</h3></Button>
             </LinkContainer>
           </p>
           <br />
           <p>
-            <h3>Redeem CareCoin tokens:</h3>
             <LinkContainer to="/store/">
-              <Button bsStyle="primary" bsSize="large">Store</Button>
+              <Button bsStyle="primary" bsSize="large" block><h3>Redeem CareCoin tokens in our Store</h3></Button>
             </LinkContainer>
           </p>
           <br />
           <p>
-            <h3>View your profile:</h3>
             <LinkContainer to="/profile/">
-              <Button bsStyle="info" bsSize="large">Profile</Button>
+              <Button bsStyle="info" bsSize="large" block><h3>View your CoinCare profile</h3></Button>
             </LinkContainer>
           </p>
 
