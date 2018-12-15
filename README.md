@@ -1,8 +1,8 @@
-# CoinCare
+# CareCoin
 
-CoinCare is a decentralized donation app that utilizes cryptoeconomics to achieve a healthy ecosystem.
-  - Donate food, clothes, money and receive CoinCare tokens as reward
-  - Accumulate CoinCare tokens and spend them in our store for concerts, events, stuff
+CareCoin is a decentralized donation app that utilizes cryptoeconomics to achieve a healthy ecosystem.
+  - Donate food, clothes, money and receive CareCoin tokens as reward
+  - Accumulate CareCoin tokens and spend them in our store for concerts, events, stuff
   - Magic
   
 ----
@@ -29,7 +29,7 @@ $ cd coin-care
 $ ganache-cli -m "birth..."
 ```
 
-Log in to Metamask and select Network Localhost on port 8545.
+Open a browser, log in to Metamask and select network Localhost on port 8545.
 
 Compile, test and migrate the contracts to the local blockchain...
 ```sh
@@ -45,7 +45,7 @@ $ cd coin-care/client
 $ npm run start
 ```
 
-Finally, point your browser to localhost:3000 and connect to Metamask!
+Finally, point your browser to http://localhost:3000/ and connect to Metamask!
 
 ----
 
