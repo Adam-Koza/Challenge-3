@@ -10,6 +10,7 @@ import { Button } from 'react-bootstrap';
 import Header from './components/header';
 import TitleTile from './components/titleTile';
 import NavHeader from './components/navHeader';
+import Footer from './components/footer';
 import Routes from './routes';
 
 import "./App.css";
@@ -100,10 +101,8 @@ class App extends Component {
           <Header title="CareCoin" />
           <div className="main-container">
             <Routes balance={this.state.balance} buyItem={this.buyItem} donate={this.donate} />
-            <div className="footer">
-            some footer here
-            </div>
           </div>
+          <Footer />
         </div>
       </Router>
     );
