@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemContainer from '../containers/store/itemContainer';
+import ItemContainer from '../../containers/store/itemContainer';
 
 // CSS
 import "./store.css";
