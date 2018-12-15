@@ -69,24 +69,7 @@ class App extends Component {
          <div className="main-container">
           <Button bsStyle="primary">Primary</Button>
            <br />
-           router stuff:
-           <nav>
-             <ul>
-               <li>
-                 <Link to="/">Home</Link>
-               </li>
-               <li>
-                 <Link to="/donation/">Donation</Link>
-               </li>
-               <li>
-                 <Link to="/store/">Store</Link>
-               </li>
-               <li>
-                 <Link to="/profile/">Profile</Link>
-               </li>
-             </ul>
-           </nav>
-
+           Nav header:
 
            <NavHeader />
 
