@@ -64,7 +64,7 @@ class App extends Component {
     this.setState({ balance: response.toNumber() });
   };
 
-  buyItem = async (e, price, item) => {
+  buyItem = async (e, price, redeem) => {
     e.preventDefault();
     const { accounts, contract } = this.state;
 
@@ -78,8 +78,8 @@ class App extends Component {
     this.setState({ balance: response.toNumber() });
 
     // Add redeemed item to transaction history.
-    var joined = this.state.redemptions.concat({id: redeemKey, name: item});
-    this.setState({ redemptions: joined })
+    var joined = this.state.redemptions.concat({id: redeemKey, name: redeem});
+    this.setState({ redemptions: joined });
     redeemKey++;
 
   };
@@ -99,7 +99,7 @@ class App extends Component {
 
     // Add donated item to transaction history.
     var joined = this.state.donations.concat({id: donateKey, name: donation});
-    this.setState({ donations: joined })
+    this.setState({ donations: joined });
     donateKey++
   };
 
@@ -115,7 +115,7 @@ class App extends Component {
             <NavHeader />
             <Routes
               balance={this.state.balance}
-              buyItem={this.state.buyItem}
+              buyItem={this.buyItem}
               donate={this.donate}
               donations={this.state.donations}
               redemptions={this.state.redemptions}
