@@ -21,13 +21,13 @@ export default class Routes extends Component {
           render={(props) => <Donation {...props} donate={this.props.donate} />}
         />
         <Route path="/store/"
-          render={(props) => <Store {...props} balance={this.props.balance} 
-          buyItem={this.props.buyItem} />}
+          render={(props) => <Store {...props} balance={this.props.balance}
+            buyItem={this.props.buyItem} />}
         />
         <Route path="/profile/"
-          render={(props) => <Profile {...props} balance={this.props.balance} 
-          donations={this.donations}
-          redemptions={this.redemptions} />}
+          render={(props) => <Profile {...props} balance={this.props.balance}
+            donations={this.donations}
+            redemptions={this.redemptions} />}
         />
       </Switch>
     )

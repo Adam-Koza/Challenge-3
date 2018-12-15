@@ -73,7 +73,7 @@ class App extends Component {
 
     // Update state with the result.
     this.setState({ balance: response.toNumber() });
-    
+
     // Add redeemed item to transaction history.
     var joined = this.state.redemptions.concat(item);
     this.setState({ redemptions: joined })
@@ -107,12 +107,12 @@ class App extends Component {
           <Header title="CareCoin" />
           <div className="main-container">
             <NavHeader />
-            <Routes 
-            balance={this.state.balance} 
-            buyItem={this.buyItem} 
-            donate={this.donate}
-            donations={this.donations}
-            redemptions={this.redemptions}
+            <Routes
+              balance={this.state.balance}
+              buyItem={this.buyItem}
+              donate={this.donate}
+              donations={this.donations}
+              redemptions={this.redemptions}
             />
 
 
