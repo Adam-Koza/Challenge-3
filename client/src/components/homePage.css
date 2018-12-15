@@ -8,10 +8,3 @@
   padding: 20px;
   /* background-color: cyan; */
 }
-
-.home-container > p > h3 {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
