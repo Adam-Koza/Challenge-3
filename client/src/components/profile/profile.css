@@ -16,13 +16,14 @@
 }
 
 .profile-balance {
-  background-color: lightpink;
+  background-color: #A53860;
   width: 350px;
   height: 150px;
   border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .profile-label {
