@@ -24,6 +24,7 @@ h4.handle {
 img {
     width: 14vw;
     height: 160px;
+    border-radius: 5%;
 }
 
 .item-bottom {
