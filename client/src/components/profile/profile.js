@@ -5,7 +5,9 @@ import "./profile.css";
 
 const Profile = props => {
   return (
-    <h2>View your awesome profile!</h2>
+    <div class="profile-container">
+      <h2>View your awesome profile!</h2>
+    </div>
   )
 }
 
