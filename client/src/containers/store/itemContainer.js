@@ -62,6 +62,7 @@ export default class ItemContainer extends Component {
                 body={item.body}
                 price={item.price}
                 date={item.date}
+                buyItem={this.props.buyItem}
             />
         });
     }

@@ -13,7 +13,7 @@ export default class Store extends Component {
     return (
       <div class="store-container">
         <h2>Redeem CareCoins in our Store!</h2>
-        <ItemContainer balance={this.props.balance} />
+        <ItemContainer balance={this.props.balance} buyItem={this.props.buyItem} />
       </div>
     )
   }

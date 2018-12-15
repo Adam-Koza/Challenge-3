@@ -19,7 +19,7 @@ export default class Routes extends Component {
         <Route path="/" exact component={HomePage} />
         <Route path="/donation/" component={Donation} />
         <Route path="/store/"
-          render={(props) => <Store {...props} balance={this.props.balance} />}
+          render={(props) => <Store {...props} balance={this.props.balance} buyItem={this.props.buyItem} />}
         />
         <Route path="/profile/" component={Profile} />
       </Switch>
