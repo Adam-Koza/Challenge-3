@@ -16,7 +16,7 @@ export default class Store extends Component {
         <p>After donating and accumulating enough CareCoins, you can spend the tokens on the awesome things listed below!</p>
         <hr />
         <div className="store-item-list">
-          <ItemContainer balance={this.props.balance} />
+          <ItemContainer balance={this.props.balance} buyItem={this.props.buyItem} />
         </div>
       </div>
     )

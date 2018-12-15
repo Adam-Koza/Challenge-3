@@ -22,13 +22,15 @@ h4.handle {
 }
 
 img {
-    width: 15vw;
+    width: 14vw;
     height: 160px;
 }
 
 .item-bottom {
+    width: 100%;
     display: flex;
     flex-flow: row;
+    align-items: center;
     justify-content: space-around;
     padding: 10px;
 }

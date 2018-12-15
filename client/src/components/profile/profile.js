@@ -1,44 +1,56 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ProfileItem from './profileItem';
 
 // CSS
 import "./profile.css";
 
-const Profile = props => {
-  return (
-    <div className="profile-container">
-      <h2>View your awesome profile!</h2>
-      <p>Review your CareCoin token balance, past donation history, and redeemed items.</p>
-      <hr />
-      <br />
-      <p>
+export default class Profile extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  renderDonations() {
+    return this.props.donations.map(donation => {
+      return <ProfileItem
+        key={donation.id}
+        name={donation.name}
+      />
+    });
+  }
+
+  renderRedemptions() {
+    return this.props.redemptions.map(redemption => {
+      return <ProfileItem
+        key={redemption.id}
+        name={redemption.name}
+      />
+    });
+  }
+
+
+
+  render() {
+    return (
+      <div className="profile-container">
+        <h2>View your awesome profile!</h2>
+        <p>Review your CareCoin token balance, past donation history, and redeemed items.</p>
+        <img className="profile-logo" src="../../../images/carecoin_icon.png" />
         <hr />
-        <h3>Total balance:</h3>
-        <span>420 CareCoins</span>
-        <hr />
-        <h3>Donation history:</h3>
-        <ul>
-          <li>
-            <span>Men's Clothes</span>
-          </li>
-          <li>
-            <span>Canned Food</span>
-          </li>
-          <li>
-            <span>Kid's Clothes</span>
-          </li>
-        </ul>
-        <hr />
-          <h3>Redeemed Items:</h3>
+        <p>
+          <div className="profile-balance"><h3>{this.props.balance} CareCoins</h3></div>
+          <hr />
+          <h3 className="profile-label">Donation history:</h3>
           <ul>
-            <li>
-              <span>Some awesome concert</span>
-            </li>
+            {this.renderDonations()}
           </ul>
           <hr />
-      </p>
-
-    </div>
-  )
+          <h3 className="profile-label">Redeemed Items:</h3>
+          <ul>
+            {this.renderRedemptions()}
+          </ul>
+          <hr />
+        </p>
+      </div>
+    )
+  }
 }
-
-export default Profile;

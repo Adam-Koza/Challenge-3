@@ -8,3 +8,30 @@
   padding: 20px;
   /* background-color: cyan; */
 }
+
+.profile-logo {
+  background-color: black;
+  height: 250px;
+  border-radius: 30%;
+}
+
+.profile-balance {
+  background-color: lightpink;
+  width: 350px;
+  height: 150px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-label {
+  
+}
+
+ul {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}

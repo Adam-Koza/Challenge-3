@@ -16,7 +16,7 @@ const DonationItem = props => {
 				</div>
 				<div className="donation-item-bottom">
 					<b>CareCoins: {props.price}</b>
-					<button type="button" className="btn btn-success" onClick={(e) => props.donate(e, props.price)}>Donate</button>
+					<button type="button" className="btn btn-success" onClick={(e) => props.donate(e, props.price, props.name)}>Donate</button>
 				</div>
 
 			</div>
