@@ -18,7 +18,7 @@ import "./App.css";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { balance: 0, web3: null, accounts: null, contract: null, items: [] };
+    this.state = { balance: 0, web3: null, accounts: null, contract: null, items: [], donations: [], redemptions: [] };
     this.buyItem = this.buyItem.bind(this);
     this.donate = this.donate.bind(this);
   }
@@ -61,7 +61,7 @@ class App extends Component {
     this.setState({ balance: response.toNumber() });
   };
 
-  buyItem = async (e, price) => {
+  buyItem = async (e, price, item) => {
     e.preventDefault();
     const { accounts, contract } = this.state;
 
@@ -73,9 +73,13 @@ class App extends Component {
 
     // Update state with the result.
     this.setState({ balance: response.toNumber() });
+    
+    // Add redeemed item to transaction history.
+    var joined = this.state.redemptions.concat(item);
+    this.setState({ redemptions: joined })
   };
 
-  donate = async (e, reward) => {
+  donate = async (e, reward, donation) => {
     e.preventDefault();
     const { accounts, contract } = this.state;
 
@@ -87,6 +91,10 @@ class App extends Component {
 
     // Update state with the result.
     this.setState({ balance: response.toNumber() });
+
+    // Add donated item to transaction history.
+    var joined = this.state.donations.concat(donation);
+    this.setState({ donations: joined })
   };
 
   render() {
@@ -99,7 +107,13 @@ class App extends Component {
           <Header title="CareCoin" />
           <div className="main-container">
             <NavHeader />
-            <Routes balance={this.state.balance} buyItem={this.buyItem} donate={this.donate} />
+            <Routes 
+            balance={this.state.balance} 
+            buyItem={this.buyItem} 
+            donate={this.donate}
+            donations={this.donations}
+            redemptions={this.redemptions}
+            />
 
 
             {/*<h1>Good to Go!</h1>
