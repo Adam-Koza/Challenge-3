@@ -67,9 +67,6 @@ class App extends Component {
         <div>
          <Header title="CareCoin" />
          <div className="main-container">
-          <Button bsStyle="primary">A test bootstrap button</Button>
-           <br />
-           Nav header:
            <NavHeader />
 
            <Route path="/" exact component={HomePage} />
