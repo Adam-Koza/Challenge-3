@@ -34,4 +34,10 @@ img {
     align-items: center;
     justify-content: space-around;
     padding: 10px;
+    margin-bottom: -40px;
 }
+
+.partent {
+    height: 100%;
+}
+
