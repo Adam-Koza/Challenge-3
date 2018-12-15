@@ -9,34 +9,48 @@ export default class DonationItemContainer extends Component {
     componentDidMount() {
         this.setState({items: [{
             id: 1,
-            name: "Rock The Park",
+            name: "Clothes",
             handle: "London, ON",
             body: "../../../images/rtp.jpg",
             price: 2000,
             date: "July 14"
         }, {
             id: 2,
-            name: "Rock The Park",
+            name: "Food",
             handle: "London, ON",
             body: "../../../images/rtp.jpg",
             price: 2000,
             date: "July 14"
         }, {
             id: 3,
-            name: "Rock The Park",
+            name: "Gift Card",
             handle: "London, ON",
             body: "../../../images/rtp.jpg",
             price: 2000,
             date: "July 14"
         }, {
             id: 4,
-            name: "Rock The Park",
+            name: "Stuff",
             handle: "London, ON",
             body: "../../../images/rtp.jpg",
             price: 2000,
             date: "July 14"
         }, {
             id: 5,
+            name: "Rock The Park",
+            handle: "London, ON",
+            body: "../../../images/rtp.jpg",
+            price: 2000,
+            date: "July 14"
+        }, {
+            id: 6,
+            name: "Rock The Park",
+            handle: "London, ON",
+            body: "../../../images/rtp.jpg",
+            price: 2000,
+            date: "July 14"
+        }, {
+            id: 7,
             name: "Rock The Park",
             handle: "London, ON",
             body: "../../../images/rtp.jpg",

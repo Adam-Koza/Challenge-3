@@ -1,6 +1,7 @@
 .donation-item-container {
     display: flex;
     flex-direction: row;
+    padding: 15px;
 }
 
 .donation-item-container h4 {
@@ -21,7 +22,7 @@ h4.handle {
 }
 
 img {
-    width: 15vw;
+    width: 90%;
     height: 160px;
 }
 
@@ -29,4 +30,5 @@ img {
     display: flex;
     flex-flow: row;
     justify-content: space-around;
+    padding: 10px;
 }
