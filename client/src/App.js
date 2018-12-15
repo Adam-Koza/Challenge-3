@@ -14,11 +14,14 @@ import Routes from './routes';
 
 import "./App.css";
 
+let donateKey = 0;
+let redeemKey = 0;
+
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { balance: 0, web3: null, accounts: null, contract: null, items: [], donations: [], redemptions: [] };
+    this.state = { balance: 0, web3: null, accounts: null, contract: null, items: [], donations: [{name: "Nothing"}], redemptions: [{name: "Nothing"}] };
     this.buyItem = this.buyItem.bind(this);
     this.donate = this.donate.bind(this);
   }
@@ -75,8 +78,10 @@ class App extends Component {
     this.setState({ balance: response.toNumber() });
 
     // Add redeemed item to transaction history.
-    var joined = this.state.redemptions.concat(item);
+    var joined = this.state.redemptions.concat({id: redeemKey, name: item});
     this.setState({ redemptions: joined })
+    redeemKey++;
+
   };
 
   donate = async (e, reward, donation) => {
@@ -93,8 +98,9 @@ class App extends Component {
     this.setState({ balance: response.toNumber() });
 
     // Add donated item to transaction history.
-    var joined = this.state.donations.concat(donation);
+    var joined = this.state.donations.concat({id: donateKey, name: donation});
     this.setState({ donations: joined })
+    donateKey++
   };
 
   render() {

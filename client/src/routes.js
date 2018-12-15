@@ -26,8 +26,8 @@ export default class Routes extends Component {
         />
         <Route path="/profile/"
           render={(props) => <Profile {...props} balance={this.props.balance}
-            donations={this.donations}
-            redemptions={this.redemptions} />}
+            donations={this.props.donations}
+            redemptions={this.props.redemptions} />}
         />
       </Switch>
     )

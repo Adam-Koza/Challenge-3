@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ProfileItem from './profileItem';
 
 // CSS
 import "./profile.css";
@@ -6,25 +7,24 @@ import "./profile.css";
 export default class Profile extends Component {
   constructor(props) {
     super(props);
+    this.state = { donations: this.props.donations, redemptions: this.props.redemptions };
   }
 
   renderDonations() {
-    return this.props.donations.map(donation => {
-      return (
-        <li>
-          <span>{donation}</span>
-        </li>
-      )
+    return this.state.donations.map(donation => {
+      return <ProfileItem
+        key={donation.id}
+        name={donation.name}
+      />
     });
   }
 
   renderRedemptions() {
-    return this.props.redemptions.map(redemption => {
-      return (
-        <li>
-          <span>{redemption}</span>
-        </li>
-      )
+    return this.state.redemptions.map(redemption => {
+      return <ProfileItem
+        key={redemption.id}
+        name={redemption.name}
+      />
     });
   }
 
@@ -40,7 +40,7 @@ export default class Profile extends Component {
         <p>
           <hr />
           <h3>Total balance:</h3>
-          <span>{props.balance} CareCoins</span>
+          <span>{this.props.balance} CareCoins</span>
           <hr />
           <h3>Donation history:</h3>
           <ul>
