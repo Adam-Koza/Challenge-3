@@ -13,6 +13,7 @@ import HomePage from './components/homePage';
 import Donation from './components/donation/donation';
 import Profile from './components/profile/profile';
 import Store from './components/store/store';
+import NavHeader from './components/navHeader';
 
 import "./App.css";
 
@@ -66,6 +67,7 @@ class App extends Component {
         <div>
          <Header title="CareCoin" />
          <div className="main-container">
+          <Button bsStyle="primary">Primary</Button>
            <br />
            router stuff:
            <nav>
@@ -86,7 +88,7 @@ class App extends Component {
            </nav>
 
 
-           <Button bsStyle="primary">Primary</Button>
+           <NavHeader />
 
            <Route path="/" exact component={HomePage} />
            <Route path="/donation/" component={Donation} />
