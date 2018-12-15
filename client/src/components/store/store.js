@@ -11,9 +11,13 @@ export default class Store extends Component {
 
   render() {
     return (
-      <div class="store-container">
+      <div className="store-container">
         <h2>Redeem CareCoins in our Store!</h2>
-        <ItemContainer balance={this.props.balance} buyItem={this.props.buyItem} />
+        <p>After donating and accumulating enough CareCoins, you can spend the tokens on the awesome things listed below!</p>
+        <hr />
+        <div className="store-item-list">
+          <ItemContainer balance={this.props.balance} />
+        </div>
       </div>
     )
   }

@@ -47,6 +47,34 @@ export default class ItemContainer extends Component {
                 body: "../../../images/rtp.jpg",
                 price: 2000,
                 date: "July 14"
+            }, {
+                id: 6,
+                name: "Rock The Park",
+                handle: "London, ON",
+                body: "../../../images/rtp.jpg",
+                price: 2000,
+                date: "July 14"
+            }, {
+                id: 7,
+                name: "Rock The Park",
+                handle: "London, ON",
+                body: "../../../images/rtp.jpg",
+                price: 2000,
+                date: "July 14"
+            },{
+                id: 8,
+                name: "Rock The Park",
+                handle: "London, ON",
+                body: "../../../images/rtp.jpg",
+                price: 2000,
+                date: "July 14"
+            },{
+                id: 9,
+                name: "Rock The Park",
+                handle: "London, ON",
+                body: "../../../images/rtp.jpg",
+                price: 2000,
+                date: "July 14"
             }
 
             ]
@@ -73,9 +101,9 @@ export default class ItemContainer extends Component {
         return (
             <div>
                 <div>
-                    <h1>Your Available Balance: {this.props.balance}</h1>
+                    <h4>Your Available Balance: {this.props.balance}</h4>
                 </div>
-                <div>
+                <div className="store-item-list">
                     {this.renderItems()}
                 </div>
             </div>

@@ -1,6 +1,7 @@
 .item-container {
     display: flex;
     flex-direction: row;
+    padding: 15px;
 }
 
 .item-container h4 {
@@ -12,7 +13,7 @@ h4.handle {
 }
 
 .item-body {
-    width: 90%;
+    /* width: 90%; */
 }
 
 .item-body p {
@@ -29,5 +30,5 @@ img {
     display: flex;
     flex-flow: row;
     justify-content: space-around;
+    padding: 10px;
 }
-

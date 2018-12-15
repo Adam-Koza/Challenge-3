@@ -8,3 +8,9 @@
   padding: 20px;
   /* background-color: cyan; */
 }
+
+.store-item-list > div > div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
