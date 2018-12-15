@@ -6,11 +6,12 @@
   align-items: center;
   flex-direction: column;
   padding: 20px;
-  /* background-color: cyan; */
+  background-color: #FFA5AB;
 }
 
 .store-item-list > div > div{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 50px;
 }

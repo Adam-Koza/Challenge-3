@@ -7,11 +7,12 @@
   flex-direction: column;
   padding: 20px;
   flex-wrap: wrap;
-  /* background-color: cyan; */
+  background-color: #FFA5AB;
 }
 
 .donation-item-list > div{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 50px;
 }
