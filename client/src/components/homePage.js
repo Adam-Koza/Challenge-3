@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap';
 import "./homePage.css";
 
 // url strings
-const IMAGE_URL = "../../images/carecoin.png";
+const IMAGE_URL = "../../images/carecoin_dark.png";
 
 const HomePage = props => {
   return (
