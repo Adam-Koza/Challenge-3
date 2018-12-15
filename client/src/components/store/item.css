@@ -1,0 +1,22 @@
+.item-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-container h4 {
+    padding-left: 10px;
+}
+
+h4.handle {
+  color: lightgray;
+}
+
+.item-body {
+    width: 90%;
+}
+
+.item-body p {
+    text-align: left;
+    color: black;
+}
+
