@@ -9,29 +9,27 @@ const HomePage = props => {
   return (
     <div class="home-container">
       <div class="home-title">
-        <h1>Welcome to CareCoin - decentralized donation app!</h1>
+        <img src="../../public/images/carecoin.png"/>
+        <h1>Welcome to <b>CareCoin</b> - a decentralized donation app!</h1>
       </div>
       <br />
-      <div class="home-items">
+      <div class="home-items col-7">
           <br />
           <p>
-            <h3>Donate and receive CareCoin tokens:</h3>
             <LinkContainer to="/donation/">
-              <Button bsStyle="success" bsSize="large">Donation</Button>
+              <Button bsStyle="success" bsSize="large" block><h1>Donate and receive CareCoin tokens</h1></Button>
             </LinkContainer>
           </p>
           <br />
           <p>
-            <h3>Redeem CareCoin tokens:</h3>
             <LinkContainer to="/store/">
-              <Button bsStyle="primary" bsSize="large">Store</Button>
+              <Button bsStyle="primary" bsSize="large" block><h1>Redeem CareCoin tokens at the Store</h1></Button>
             </LinkContainer>
           </p>
           <br />
           <p>
-            <h3>View your profile:</h3>
             <LinkContainer to="/profile/">
-              <Button bsStyle="info" bsSize="large">Profile</Button>
+              <Button bsStyle="secondary" bsSize="large" block><h1>View your CareCoin profile</h1></Button>
             </LinkContainer>
           </p>
 

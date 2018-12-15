@@ -1,12 +1,12 @@
 import React from 'react';
 
+// CSS
 import "./header.css";
 
 const Header = props => {
   return (
     <div className="header-bar">
-      {props.title}
-      <br/>{props.aprop}
+      <img src="../../public/images/carecoin_icon.png"/>{props.title}
     </div>
   )
 }
