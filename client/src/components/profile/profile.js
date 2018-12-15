@@ -19,7 +19,7 @@ export default class Profile extends Component {
   }
 
   renderRedemptions() {
-    return this.state.redemptions.map(redemption => {
+    return this.props.redemptions.map(redemption => {
       return <ProfileItem
         key={redemption.id}
         name={redemption.name}

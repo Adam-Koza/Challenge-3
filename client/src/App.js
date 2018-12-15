@@ -21,7 +21,7 @@ let redeemKey = 0;
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { balance: 0, web3: null, accounts: null, contract: null, items: [], donations: [{name: "Nothing"}], redemptions: [{name: "Nothing"}] };
+    this.state = { balance: 0, web3: null, accounts: null, contract: null, items: [], donations: [], redemptions: [] };
     this.buyItem = this.buyItem.bind(this);
     this.donate = this.donate.bind(this);
   }
@@ -115,10 +115,10 @@ class App extends Component {
             <NavHeader />
             <Routes
               balance={this.state.balance}
-              buyItem={this.buyItem}
+              buyItem={this.state.buyItem}
               donate={this.donate}
-              donations={this.donations}
-              redemptions={this.redemptions}
+              donations={this.state.donations}
+              redemptions={this.state.redemptions}
             />
 
 
