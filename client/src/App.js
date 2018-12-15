@@ -20,6 +20,7 @@ class App extends Component {
     super(props);
     this.state = { balance: 0, web3: null, accounts: null, contract: null, items: [] };
     this.buyItem = this.buyItem.bind(this);
+    this.donate = this.donate.bind(this);
   }
 
   componentDidMount = async () => {
@@ -66,6 +67,20 @@ class App extends Component {
 
     // Spend tokens.
     await contract.transfer(accounts[1], price, { from: accounts[0] });
+
+    // Get the balance from the contract to prove it worked.
+    const response = await contract.balanceOf(accounts[0]);
+
+    // Update state with the result.
+    this.setState({ balance: response.toNumber() });
+  };
+
+  donate = async (e, reward) => {
+    e.preventDefault();
+    const { accounts, contract } = this.state;
+
+    // Spend tokens.
+    await contract.mint(reward, { from: accounts[0] });
 
     // Get the balance from the contract to prove it worked.
     const response = await contract.balanceOf(accounts[0]);
