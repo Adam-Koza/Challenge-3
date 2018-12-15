@@ -4,9 +4,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: pink;
+  background-color: #A53860;
   font-size: 150%;
-  margin-top:55px;
+  margin-top:65px;
+  color: white;
 }
 
 .header-img {

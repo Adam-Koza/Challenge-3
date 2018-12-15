@@ -3,13 +3,15 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 // CSS
 import "./navHeader.css";
+// url strings
+const ICON_URL = "../../images/carecoin_icon.png";
 
 const NavHeader = props => {
   return (
     <div className="fixed-header">
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a className="navbar-brand" href="/">CareCoin</a>
-
+      <img className="header-img" src={ICON_URL}/>&nbsp;
+      <Link to="/" className="navbar-brand">CareCoin</Link>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">

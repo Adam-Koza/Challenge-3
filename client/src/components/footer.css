@@ -7,17 +7,18 @@
 }
 
 .footer-item {
-  background-color: #D6e9fe;
+  background-color: #A53860;
   height:40px;
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 
 .footer-one,
 .footer-three {
   flex: initial;
-  background-color: #5995da;
+  background-color: #B47978;
   width: 200px;
 }
