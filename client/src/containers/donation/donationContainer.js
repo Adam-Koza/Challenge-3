@@ -10,47 +10,38 @@ export default class DonationItemContainer extends Component {
         this.setState({items: [{
             id: 1,
             name: "Men's Clothes",
-            body: "../../../images/clothes_men.jpg",
+            body: "../../../images/clothes_men.png",
             price: 20,
         }, {
             id: 2,
             name: "Women's Clothes",
-            body: "../../../images/clothes_women.jpg",
+            body: "../../../images/clothes_women.png",
             price: 20,
         }, {
             id: 3,
-            name: "Clothes - Accessories",
-            handle: "London, ON",
-            body: "../../../images/clothes_accessories.jpg",
+            name: "Kid's Clothes",
+            body: "../../../images/clothes_accessories.png",
             price: 10,
         }, {
             id: 4,
-            name: "Stuff",
-            handle: "London, ON",
-            body: "../../../images/rtp.jpg",
-            price: 2000,
-            date: "July 14"
+            name: "Assorted Clothes",
+            body: "../../../images/clothes_accessories.png",
+            price: 10,
         }, {
             id: 5,
-            name: "Rock The Park",
-            handle: "London, ON",
-            body: "../../../images/rtp.jpg",
-            price: 2000,
-            date: "July 14"
+            name: "Food items",
+            body: "../../../images/rtp.png",
+            price: 20,
         }, {
             id: 6,
-            name: "Rock The Park",
-            handle: "London, ON",
-            body: "../../../images/rtp.jpg",
-            price: 2000,
-            date: "July 14"
+            name: "Gift Cards",
+            body: "../../../images/rtp.png",
+            price: 20,
         }, {
             id: 7,
             name: "Rock The Park",
-            handle: "London, ON",
-            body: "../../../images/rtp.jpg",
+            body: "../../../images/rtp.png",
             price: 2000,
-            date: "July 14"
         }
 
         ]});
