@@ -24,3 +24,12 @@
   justify-content: center;
   align-items: center;
 }
+
+.profile-label {
+  
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+}

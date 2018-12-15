@@ -39,12 +39,12 @@ export default class Profile extends Component {
         <p>
           <div className="profile-balance"><h3>{this.props.balance} CareCoins</h3></div>
           <hr />
-          <h3>Donation history:</h3>
+          <h3 className="profile-label">Donation history:</h3>
           <ul>
             {this.renderDonations()}
           </ul>
           <hr />
-          <h3>Redeemed Items:</h3>
+          <h3 className="profile-label">Redeemed Items:</h3>
           <ul>
             {this.renderRedemptions()}
           </ul>
