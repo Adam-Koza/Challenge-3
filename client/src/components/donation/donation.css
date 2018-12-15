@@ -8,3 +8,8 @@
   padding: 20px;
   /* background-color: cyan; */
 }
+
+.donation-item-container > div{
+  display:flex;
+  width: 100%;
+}

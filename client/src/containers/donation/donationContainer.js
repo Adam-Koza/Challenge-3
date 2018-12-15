@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import DonationItem from '../../components/donation/donationItem';
 
+// CSS
+import './donationContainer.css';
+
 export default class DonationItemContainer extends Component {
     state = {
         items: []
@@ -42,6 +45,27 @@ export default class DonationItemContainer extends Component {
             body: "../../../images/rtp.jpg",
             price: 2000,
             date: "July 14"
+        }, {
+            id:6,
+            name: "Rock The Park",
+            handle: "London, ON",
+            body: "../../../images/rtp.jpg",
+            price: 2000,
+            date: "July 14"
+        }, {
+            id: 7,
+            name: "Rock The Park",
+            handle: "London, ON",
+            body: "../../../images/rtp.jpg",
+            price: 2000,
+            date: "July 14"
+        }, {
+            id: 8,
+            name: "Rock The Park",
+            handle: "London, ON",
+            body: "../../../images/rtp.jpg",
+            price: 2000,
+            date: "July 14"
         }
 
         ]});
@@ -64,9 +88,7 @@ export default class DonationItemContainer extends Component {
 
     render() {
         return (
-            <div>
-                {this.renderItems()}
-            </div>
+            {this.renderItems()}
         )
     }
 }
