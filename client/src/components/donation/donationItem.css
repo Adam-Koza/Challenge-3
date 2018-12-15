@@ -1,0 +1,32 @@
+.donation-item-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.donation-item-container h4 {
+    padding-left: 10px;
+}
+
+h4.handle {
+  color: lightgray;
+}
+
+.donation-item-body {
+    width: 90%;
+}
+
+.donation-item-body p {
+    text-align: left;
+    color: black;
+}
+
+img {
+    width: 15vw;
+    height: 160px;
+}
+
+.donation-item-bottom {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}

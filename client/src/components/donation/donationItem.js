@@ -1,14 +1,14 @@
 import React from 'react';
 
 // CSS
-import "./item.css"
-import ItemTile from "./itemTile";
+import "./donationItem.css"
+import DonationItemTile from "./donationItemTile";
 
-const Item = props => {
+const DonationItem = props => {
 	return (
-		<ItemTile>
+		<DonationItemTile>
 			<div>
-				<div className="item-container">
+				<div className="donation-item-container">
 					<h4 className="name">{props.name}</h4>
 					<h4 className="handle">{props.handle} - {props.date}</h4>
 				</div>
@@ -21,8 +21,8 @@ const Item = props => {
 				</div>
 
 			</div>
-		</ItemTile>
+		</DonationItemTile>
 	)
 };
 
-export default Item;
+export default DonationItem;
