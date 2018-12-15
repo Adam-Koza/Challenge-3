@@ -11,28 +11,29 @@ const IMAGE_URL = "../../images/carecoin.png";
 const HomePage = props => {
   return (
     <div class="home-container">
-      <img src={IMAGE_URL} className="banner-image"/>
       <div class="home-title">
-        <h1>Welcome to CareCoin - decentralized donation app!</h1>
+        <h1>Welcome To</h1>
+        <img src={IMAGE_URL} className="banner-image"/>
+        <h2>A Decentralized Donation App!</h2>
       </div>
       <br />
-      <div class="home-items col-7">
+      <div class="home-items col-5">
           <br />
           <p>
             <LinkContainer to="/donation/">
-              <Button bsStyle="success" bsSize="large" block><h1>Donate and receive CareCoin tokens</h1></Button>
+              <Button bsStyle="success" bsSize="large" block><h3>Donate and receive CareCoin tokens</h3></Button>
             </LinkContainer>
           </p>
           <br />
           <p>
             <LinkContainer to="/store/">
-              <Button bsStyle="primary" bsSize="large" block><h1>Redeem CareCoin tokens in our Store</h1></Button>
+              <Button bsStyle="primary" bsSize="large" block><h3>Redeem CareCoin tokens in our Store</h3></Button>
             </LinkContainer>
           </p>
           <br />
           <p>
             <LinkContainer to="/profile/">
-              <Button bsStyle="info" bsSize="large" block><h1>View your CoinCare profile</h1></Button>
+              <Button bsStyle="info" bsSize="large" block><h3>View your CoinCare profile</h3></Button>
             </LinkContainer>
           </p>
 

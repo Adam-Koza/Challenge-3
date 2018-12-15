@@ -6,9 +6,16 @@
   align-items: center;
   flex-direction: column;
   padding: 20px;
-  /* background-color: cyan; */
+  background-color: cyan;
 }
 
+.home-title{
+  display:flex;
+  width:100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .banner-image{
-  margin-bottom: 25px;
+    margin-bottom: 25px;
 }
