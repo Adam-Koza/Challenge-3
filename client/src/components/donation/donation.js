@@ -6,7 +6,7 @@ import "./donation.css";
 
 const Donation = props => {
   return (
-    <div class="donation-container">
+    <div className="donation-container">
       <h2>Donate and receive CareCoins!</h2>
       <p>Donate items and once verified you will receive CareCoin tokens. Below are items that we are currently accepting and the amount of tokens that you will receive. Thanks for helping the community.</p>
       <div className="donation-item-list">
