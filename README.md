@@ -4,6 +4,8 @@ CoinCare is a decentralized donation app that utilizes cryptoeconomics to achiev
   - Donate food, clothes, money and receive CoinCare tokens as reward
   - Accumulate CoinCare tokens and spend them in our store for concerts, events, stuff
   - Magic
+  
+----
 
 ### Installation
 
@@ -44,6 +46,8 @@ $ npm run start
 ```
 
 Finally, point your browser to localhost:3000 and connect to Metamask!
+
+----
 
 Authors
 ----
