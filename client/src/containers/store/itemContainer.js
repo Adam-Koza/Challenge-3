@@ -1,51 +1,56 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Item from '../../components/store/item';
 
 
 export default class ItemContainer extends Component {
-    state = {
-        items: []
+    constructor(props) {
+        super(props);
+        this.state = {
+            items: []
+        }
     }
 
     componentDidMount() {
-        this.setState({items: [{
-            id: 1,
-            name: "Rock The Park",
-            handle: "London, ON",
-            body: "../../../images/rtp.jpg",
-            price: 2000,
-            date: "July 14"
-        }, {
-            id: 2,
-            name: "Rock The Park",
-            handle: "London, ON",
-            body: "../../../images/rtp.jpg",
-            price: 2000,
-            date: "July 14"
-        }, {
-            id: 3,
-            name: "Rock The Park",
-            handle: "London, ON",
-            body: "../../../images/rtp.jpg",
-            price: 2000,
-            date: "July 14"
-        }, {
-            id: 4,
-            name: "Rock The Park",
-            handle: "London, ON",
-            body: "../../../images/rtp.jpg",
-            price: 2000,
-            date: "July 14"
-        }, {
-            id: 5,
-            name: "Rock The Park",
-            handle: "London, ON",
-            body: "../../../images/rtp.jpg",
-            price: 2000,
-            date: "July 14"
-        } 
-        
-        ]});
+        this.setState({
+            items: [{
+                id: 1,
+                name: "Rock The Park",
+                handle: "London, ON",
+                body: "../../../images/rtp.jpg",
+                price: 2000,
+                date: "July 14"
+            }, {
+                id: 2,
+                name: "Rock The Park",
+                handle: "London, ON",
+                body: "../../../images/rtp.jpg",
+                price: 2000,
+                date: "July 14"
+            }, {
+                id: 3,
+                name: "Rock The Park",
+                handle: "London, ON",
+                body: "../../../images/rtp.jpg",
+                price: 2000,
+                date: "July 14"
+            }, {
+                id: 4,
+                name: "Rock The Park",
+                handle: "London, ON",
+                body: "../../../images/rtp.jpg",
+                price: 2000,
+                date: "July 14"
+            }, {
+                id: 5,
+                name: "Rock The Park",
+                handle: "London, ON",
+                body: "../../../images/rtp.jpg",
+                price: 2000,
+                date: "July 14"
+            }
+
+            ]
+        });
     }
 
     renderItems() {
@@ -66,7 +71,12 @@ export default class ItemContainer extends Component {
     render() {
         return (
             <div>
-                {this.renderItems()}
+                <div>
+                    <h1>Your Available Balance: {this.props.balance}</h1>
+                </div>
+                <div>
+                    {this.renderItems()}
+                </div>
             </div>
         )
     }
