@@ -6,5 +6,12 @@
   align-items: center;
   flex-direction: column;
   padding: 20px;
+  flex-wrap: wrap;
   /* background-color: cyan; */
+}
+
+.donation-item-list > div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
