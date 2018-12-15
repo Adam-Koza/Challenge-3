@@ -34,12 +34,10 @@ export default class Profile extends Component {
       <div className="profile-container">
         <h2>View your awesome profile!</h2>
         <p>Review your CareCoin token balance, past donation history, and redeemed items.</p>
+        <img className="profile-logo" src="../../../images/carecoin_icon.png" />
         <hr />
-        <br />
         <p>
-          <hr />
-          <h3>Total balance:</h3>
-          <span>{this.props.balance} CareCoins</span>
+          <div className="profile-balance"><h3>{this.props.balance} CareCoins</h3></div>
           <hr />
           <h3>Donation history:</h3>
           <ul>
