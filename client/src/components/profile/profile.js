@@ -7,11 +7,10 @@ import "./profile.css";
 export default class Profile extends Component {
   constructor(props) {
     super(props);
-    this.state = { donations: this.props.donations, redemptions: this.props.redemptions };
   }
 
   renderDonations() {
-    return this.state.donations.map(donation => {
+    return this.props.donations.map(donation => {
       return <ProfileItem
         key={donation.id}
         name={donation.name}
