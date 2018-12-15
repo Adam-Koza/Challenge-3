@@ -56,25 +56,25 @@ export default class ItemContainer extends Component {
                 date: "2019"
             }, {
                 id: 7,
-                name: "Rock The Park",
-                handle: "London, ON",
-                body: "../../../images/rtp.jpg",
-                price: 2000,
-                date: "July 14"
+                name: "Spring Rolls",
+                handle: "Canada",
+                body: "../../../images/spr.jpeg",
+                price: 300,
+                date: "Coupon"
             },{
                 id: 8,
-                name: "Rock The Park",
-                handle: "London, ON",
-                body: "../../../images/rtp.jpg",
-                price: 2000,
-                date: "July 14"
+                name: "Leafs Jersey",
+                handle: "Canada",
+                body: "../../../images/jer.jpeg",
+                price: 5000,
+                date: "Coupon"
             },{
                 id: 9,
-                name: "Rock The Park",
-                handle: "London, ON",
-                body: "../../../images/rtp.jpg",
-                price: 2000,
-                date: "July 14"
+                name: "ROM Ticket",
+                handle: "Toronto, ON",
+                body: "../../../images/rom.jpeg",
+                price: 900,
+                date: "2019"
             }
 
             ]
