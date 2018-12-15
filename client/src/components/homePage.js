@@ -5,7 +5,7 @@ import "./homePage.css";
 
 const HomePage = props => {
   return (
-    <h1>Welcome to Coin Care, decentralized donation app!</h1>
+    <h1>Welcome to Coin Care - decentralized donation app!</h1>
   )
 }
 
