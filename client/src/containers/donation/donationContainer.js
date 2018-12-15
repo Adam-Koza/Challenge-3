@@ -20,7 +20,7 @@ export default class DonationItemContainer extends Component {
         }, {
             id: 3,
             name: "Kid's Clothes",
-            body: "../../../images/clothes_accessories.png",
+            body: "../../../images/clothes_kid.png",
             price: 10,
         }, {
             id: 4,
@@ -30,18 +30,18 @@ export default class DonationItemContainer extends Component {
         }, {
             id: 5,
             name: "Food items",
-            body: "../../../images/rtp.png",
+            body: "../../../images/food3.png",
             price: 20,
         }, {
             id: 6,
             name: "Gift Cards",
-            body: "../../../images/rtp.png",
+            body: "../../../images/giftcard.png",
             price: 20,
         }, {
             id: 7,
-            name: "Rock The Park",
-            body: "../../../images/rtp.png",
-            price: 2000,
+            name: "Money (CAD)",
+            body: "../../../images/money.png",
+            price: 50,
         }
 
         ]});
