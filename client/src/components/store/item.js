@@ -17,7 +17,7 @@ const Item = props => {
 				</div>
 				<div className="item-bottom">
 				<b>CareCoins: {props.price}</b>
-				<button type="button" className="btn btn-success" onClick={(e) => props.buyItem(e, props.price)}>Redeem</button>
+				<button type="button" className="btn btn-success" onClick={(e) => props.buyItem(e, props.price, props.name)}>Redeem</button>
 				</div>
 
 			</div>
