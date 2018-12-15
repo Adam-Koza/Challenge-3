@@ -13,7 +13,7 @@ CoinCare requires these programs to run:
   - [Ganache-CLI](https://github.com/trufflesuite/ganache-cli)
   - [Metamask](https://metamask.io/)
 
-Install the dependencies and devDependencies and start the server.
+Install the dependencies and devDependencies...
 
 ```sh
 $ cd coin-care/client
@@ -27,9 +27,9 @@ $ cd coin-care
 $ ganache-cli -m "birth..."
 ```
 
-Log in to Metamask and select Network Localhost on port 8545
+Log in to Metamask and select Network Localhost on port 8545.
 
-Compile, test and migrate the contracts to the local blockchain
+Compile, test and migrate the contracts to the local blockchain...
 ```sh
 $ cd coin-care
 $ truffle compile
@@ -44,6 +44,11 @@ $ npm run start
 ```
 
 Finally, point your browser to localhost:3000 and connect to Metamask!
+
+Authors
+----
+- [Adam-Koza](https://github.com/Adam-Koza)
+- [yaneshcode](https://github.com/yaneshcode)
 
 License
 ----
