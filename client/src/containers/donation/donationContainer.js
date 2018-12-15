@@ -9,25 +9,20 @@ export default class DonationItemContainer extends Component {
     componentDidMount() {
         this.setState({items: [{
             id: 1,
-            name: "Clothes",
-            handle: "London, ON",
-            body: "../../../images/rtp.jpg",
-            price: 2000,
-            date: "July 14"
+            name: "Men's Clothes",
+            body: "../../../images/clothes_men.jpg",
+            price: 20,
         }, {
             id: 2,
-            name: "Food",
-            handle: "London, ON",
-            body: "../../../images/rtp.jpg",
-            price: 2000,
-            date: "July 14"
+            name: "Women's Clothes",
+            body: "../../../images/clothes_women.jpg",
+            price: 20,
         }, {
             id: 3,
-            name: "Gift Card",
+            name: "Clothes - Accessories",
             handle: "London, ON",
-            body: "../../../images/rtp.jpg",
-            price: 2000,
-            date: "July 14"
+            body: "../../../images/clothes_accessories.jpg",
+            price: 10,
         }, {
             id: 4,
             name: "Stuff",
@@ -66,10 +61,8 @@ export default class DonationItemContainer extends Component {
             return <DonationItem
                 key={"item-" + item.id}
                 name={item.name}
-                handle={item.handle}
                 body={item.body}
                 price={item.price}
-                date={item.date}
             />
         });
     }
