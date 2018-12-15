@@ -14,8 +14,9 @@ import Routes from './routes';
 
 import "./App.css";
 
+
 class App extends Component {
-  state = { balance: 0, web3: null, accounts: null, contract: null };
+  state = { balance: 0, web3: null, accounts: null, contract: null, items: [] };
 
   componentDidMount = async () => {
     try {
@@ -62,10 +63,10 @@ class App extends Component {
     return (
       <Router>
         <div>
-         <Header title="CareCoin" />
-         <div className="main-container">
-           <NavHeader />
-           <Routes />
+          <Header title="CareCoin" />
+          <div className="main-container">
+            <NavHeader />
+            <Routes />
 
 
             {/*<h1>Good to Go!</h1>
@@ -79,7 +80,7 @@ class App extends Component {
             Try changing the value stored on <strong>line 40</strong> of App.js.
             </p>
             <div>Your balance is: {this.state.balance}</div>*/}
-         </div>
+          </div>
         </div>
       </Router>
     );
