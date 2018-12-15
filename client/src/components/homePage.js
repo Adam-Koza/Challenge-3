@@ -33,7 +33,7 @@ const HomePage = props => {
           <br />
           <p>
             <LinkContainer to="/profile/">
-              <Button bsStyle="info" bsSize="large" block><h3>View your CoinCare profile</h3></Button>
+              <Button bsStyle="info" bsSize="large" block><h3>View your CareCoin profile</h3></Button>
             </LinkContainer>
           </p>
 
