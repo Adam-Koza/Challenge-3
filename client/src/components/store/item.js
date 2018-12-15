@@ -13,8 +13,13 @@ const Item = props => {
 					<h4 className="handle">{props.handle} - {props.date}</h4>
 				</div>
 				<div className="item-body">
-					{props.body}
+					<img src={props.body}/>
 				</div>
+				<div className="item-bottom">
+				<b>CareCoins: {props.price}</b>
+				<button type="button" className="btn btn-success">Redeem</button>
+				</div>
+
 			</div>
 		</ItemTile>
 	)

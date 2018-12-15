@@ -20,3 +20,14 @@ h4.handle {
     color: black;
 }
 
+img {
+    width: 15vw;
+    height: 160px;
+}
+
+.item-bottom {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+

@@ -1,6 +1,10 @@
 .item-tile-container {
-    width: 20vw;
-    min-height: 140px;
+    width: 15vw;
+    min-height: 180px;
     background-color: white;
     margin-bottom: 0.5%;
+    border: solid #000;
+    border-radius: 10%;
+    border-width: thin;
+    border-color: black;
 }

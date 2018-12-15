@@ -10,34 +10,39 @@ export default class ItemContainer extends Component {
     componentDidMount() {
         this.setState({items: [{
             id: 1,
-            name: "Adam Koza",
-            handle: "@adamkoza",
-            body: "Hello, this is my first tweet!",
-            date: "Dec 4"
+            name: "Rock The Park",
+            handle: "London, ON",
+            body: "../../../images/rtp.jpg",
+            price: 2000,
+            date: "July 14"
         }, {
             id: 2,
-            name: "Adam Koza",
-            handle: "@adamkoza",
-            body: "Hello, this is my first tweet!",
-            date: "Dec 4"
+            name: "Rock The Park",
+            handle: "London, ON",
+            body: "../../../images/rtp.jpg",
+            price: 2000,
+            date: "July 14"
         }, {
             id: 3,
-            name: "Adam Koza",
-            handle: "@adamkoza",
-            body: "Hello, this is my first tweet!",
-            date: "Dec 4"
+            name: "Rock The Park",
+            handle: "London, ON",
+            body: "../../../images/rtp.jpg",
+            price: 2000,
+            date: "July 14"
         }, {
             id: 4,
-            name: "Adam Koza",
-            handle: "@adamkoza",
-            body: "Hello, this is my first tweet!",
-            date: "Dec 4"
+            name: "Rock The Park",
+            handle: "London, ON",
+            body: "../../../images/rtp.jpg",
+            price: 2000,
+            date: "July 14"
         }, {
             id: 5,
-            name: "Adam Koza",
-            handle: "@adamkoza",
-            body: "Hello, this is my first tweet!",
-            date: "Dec 4"
+            name: "Rock The Park",
+            handle: "London, ON",
+            body: "../../../images/rtp.jpg",
+            price: 2000,
+            date: "July 14"
         } 
         
         ]});
@@ -50,6 +55,7 @@ export default class ItemContainer extends Component {
                 name={item.name}
                 handle={item.handle}
                 body={item.body}
+                price={item.price}
                 date={item.date}
             />
         });
