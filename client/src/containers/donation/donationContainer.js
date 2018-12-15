@@ -2,8 +2,11 @@ import React, {Component} from 'react';
 import DonationItem from '../../components/donation/donationItem';
 
 export default class DonationItemContainer extends Component {
-    state = {
-        items: []
+    constructor(props) {
+        super(props);
+        this.state = {
+            items: []
+        }
     }
 
     componentDidMount() {
@@ -54,6 +57,7 @@ export default class DonationItemContainer extends Component {
                 name={item.name}
                 body={item.body}
                 price={item.price}
+                donate={this.props.donate}
             />
         });
     }
